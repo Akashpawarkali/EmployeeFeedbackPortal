@@ -90,5 +90,5 @@ project-root/
 | POST   | `http://localhost:5000/api/feedback`                            | Create new feedback                |
 | GET    | `http://localhost:5000/api/feedback`                            | Get all feedbacks                  |
 | GET    | `http://localhost:5000/api/feedback?category=Work+Environment`  | Get feedbacks by category |
-| PUT    | `http://localhost:5000/api/feedback/:id/reviewed`               | Mark feedback as reviewed          |
+| PATCH    | `http://localhost:5000/api/feedback/:id/reviewed`               | Mark feedback as reviewed          |
 | DELETE | `http://localhost:5000/api/feedback/:id`                        | Delete a feedback by ID            |
