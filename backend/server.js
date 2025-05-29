@@ -1,9 +1,8 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const dotenv = require("dotenv");
-const Feedback = require("./models/Feedback");
-
+import dotenv from 'dotenv';
+import express from 'express';
+import cors from 'cors';
+import connectDB from './config/dbConnect.js';
+import feedbackRoutes from './Routes/FeedbackRoute.js';
 dotenv.config();
 const app = express();
 
@@ -14,3 +13,8 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+connectDB();
+
+
+app.use(cors());
+app.use('/api/feedback',feedbackRoutes);
