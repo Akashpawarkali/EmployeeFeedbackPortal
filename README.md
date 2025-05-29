@@ -47,16 +47,15 @@ npm start
 *if backend starts good if not then install npm 
 npm install
 
- ---------- api -------
-1)get feedback by category
+ ---------- api's -------
+1)create feedback 
+http://localhost:5000/api/feedback
+
+2)get all feedbacks
+http://localhost:5000/api/feedback
+
+3)get feedback by category
 http://localhost:5000/api/feedback?category=Work+Environment
-
-2)create feedback 
-http://localhost:5000/api/feedback
-
-3)get all feedbacks
-http://localhost:5000/api/feedback
-
 4)mark viewd feedback
 
 http://localhost:5000/api/feedback/:id/reviewed
