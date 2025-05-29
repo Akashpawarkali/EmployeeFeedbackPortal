@@ -12,6 +12,7 @@ This is the **React** frontend of the Employee Feedback System. It allows users 
 - npm (v6 or higher)
 
 ---
+## Backend 
 
 ## 🚀 Getting Started
 
@@ -24,7 +25,7 @@ cd frontend
 npm install
 npm start 
 
-# Backend --
+### 2. Backend --
 
 This is the **Node.js** and **Express** backend API for the Employee Feedback System. It stores user feedback data in a local MongoDB database.
 
