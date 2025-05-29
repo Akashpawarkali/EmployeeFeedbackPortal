@@ -74,7 +74,20 @@ const AdminView = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    const fetchDataAsync = async () => {
+      setLoading(true);
+      try {
+        const res = await axios.get(`${baseurl}/feedback`, {
+          params: filter ? { category: filter } : {},
+        });
+        setFeedbacks(res.data);
+      } catch (err) {
+        setToast({ open: true, severity: 'error', message: 'Failed to fetch feedbacks' });
+        console.error(err);
+      }
+      setLoading(false);
+    };
+    fetchDataAsync();
   }, [filter]);
 
   return (
