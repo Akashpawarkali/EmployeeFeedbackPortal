@@ -1,67 +1,94 @@
-# 🖥️Employee Feedback System
 
+# 🖥️ Employee Feedback System
 
-# Frontend 
-This is the **React** frontend of the Employee Feedback System. It allows users to submit feedback and view responses from the admin.
+A full-stack web application that allows employees to submit feedback and lets administrators view, categorize, and manage the feedback. Built using **React** for the frontend and **Node.js/Express** with **MongoDB** for the backend.
 
 ---
 
-## 📦 Requirements
+## 📁 Project Structure
+
+```
+project-root/
+│
+├── frontend/   → React app for users
+└── backend/    → Node.js & Express API server
+```
+
+---
+
+## 🎨 Frontend – React App
+
+### 📂 Location
+
+`/frontend`
+
+### 📦 Requirements
 
 - Node.js (v14 or higher)
 - npm (v6 or higher)
 
+### 🚀 Getting Started
+
+1. Open a terminal and navigate to the frontend folder:
+
+    ```bash
+    cd frontend
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the frontend development server:
+
+    ```bash
+    npm start
+    ```
+
 ---
-## Backend 
 
-## 🚀 Getting Started
+## 🛠️ Backend – Node.js + Express + MongoDB
 
-### 1. Install Dependencies
+### 📂 Location
 
-Navigate to the frontend folder and install packages:
+`/backend`
 
-```bash
-cd frontend
-npm install
-npm start 
-
-### 2. Backend --
-
-This is the **Node.js** and **Express** backend API for the Employee Feedback System. It stores user feedback data in a local MongoDB database.
-
----
-
-## 📦 Requirements
+### 📦 Requirements
 
 - Node.js
-- MongoDB installed and running locally
-- MongoDB Compass (optional, for GUI)
+- MongoDB (installed and running locally)
+- MongoDB Compass *(optional, for GUI interaction with MongoDB)*
+
+### 🚀 Getting Started
+
+1. Open a terminal and navigate to the backend folder:
+
+    ```bash
+    cd backend
+    ```
+
+2. Start the backend server:
+
+    ```bash
+    npm start
+    ```
+
+    > ⚠️ If the backend doesn't start due to missing packages, run:
+
+    ```bash
+    npm install
+    ```
 
 ---
 
-## 🚀 Getting Started
+### 🔌 API Endpoints
 
-
-Navigate to the backend folder and run:
-
-```bash
-cd backend
-npm start 
-*if backend starts good if not then install npm 
-npm install
-
- ---------- api's -------
-1)create feedback 
-http://localhost:5000/api/feedback
-
-2)get all feedbacks
-http://localhost:5000/api/feedback
-
-3)get feedback by category
-http://localhost:5000/api/feedback?category=Work+Environment
-4)mark viewd feedback
-
-http://localhost:5000/api/feedback/:id/reviewed
-
-5)delete feedback
-http://localhost:5000/api/feedback/:id
+| Method | Endpoint                                                        | Description                        |
+|--------|--------------------------------------------------               |------------------------------------|
+| POST   | `http://localhost:5000/api/feedback`                            | Create new feedback                |
+| GET    | `http://localhost:5000/api/feedback`                            | Get all feedbacks                  |
+| GET    | `http://localhost:5000/api/feedback?category=Work+Environment`  | Get feedbacks by category |
+| PUT    | `http://localhost:5000/api/feedback/:id/reviewed`               | Mark feedback as reviewed          |
+| DELETE | `http://localhost:5000/api/feedback/:id`                        | Delete a feedback by ID            |
