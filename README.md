@@ -1,5 +1,7 @@
-# 🖥️ Frontend - Employee Feedback System
+# 🖥️Employee Feedback System
 
+
+# Frontend 
 This is the **React** frontend of the Employee Feedback System. It allows users to submit feedback and view responses from the admin.
 
 ---
@@ -21,8 +23,8 @@ Navigate to the frontend folder and install packages:
 cd frontend
 npm install
 npm start 
- ------------Bakend---------------------
 
+# Backend --
 
 This is the **Node.js** and **Express** backend API for the Employee Feedback System. It stores user feedback data in a local MongoDB database.
 
